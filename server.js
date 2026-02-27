@@ -15,6 +15,8 @@ app.use("/servicos", servicoRoutes);
 app.use("/agendamentos", agendamentoRoutes);
 app.use("/dashboard", dashboardRoutes);
 
-app.listen(3001, () => {
-  console.log("Servidor rodando na porta 3001 🚀");
+const PORT = process.env.PORT || 3333;
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Servidor rodando na porta ${PORT}`);
 });
